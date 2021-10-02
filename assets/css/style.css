@@ -44,6 +44,7 @@ a {
 .border-shadow {
   border: 1px solid var(--border-btn);
   box-shadow: 1px 3px 10px #e9ecef;
+  padding: 0.6em 1.2em;
 }
 
 .text-dark {
