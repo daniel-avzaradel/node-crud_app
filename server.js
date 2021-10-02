@@ -24,7 +24,7 @@ app.use("/images", express.static(path.resolve(__dirname, "assets/images")));
 app.use("/js", express.static(path.resolve(__dirname, "assets/js")));
 //css/style.css
 
-app.get("/", (req, res) => {
+app.get("/views", (req, res) => {
   res.render("index");
 });
 
