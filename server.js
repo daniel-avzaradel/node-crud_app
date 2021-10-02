@@ -24,8 +24,12 @@ app.use("/images", express.static(path.resolve(__dirname, "assets/images")));
 app.use("/js", express.static(path.resolve(__dirname, "assets/js")));
 //css/style.css
 
-app.get("/views", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index");
+});
+
+app.get("/add-user", (req, res) => {
+  res.render("add_user");
 });
 
 app.listen(PORT, () => {
