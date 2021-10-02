@@ -19,9 +19,13 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
 // load assets
+app.use("/css", express.static(path.resolve(__dirname, "assets/css")));
+app.use("/images", express.static(path.resolve(__dirname, "assets/images")));
+app.use("/js", express.static(path.resolve(__dirname, "assets/js")));
+//css/style.css
 
 app.get("/", (req, res) => {
-  res.send("Server is online");
+  res.render("index");
 });
 
 app.listen(PORT, () => {
